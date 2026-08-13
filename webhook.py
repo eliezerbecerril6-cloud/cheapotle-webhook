@@ -602,14 +602,19 @@ def webhook():
 # START WEBHOOK
 # =========================
 
+# =========================
+# START WEBHOOK
+# =========================
+
+import os
+
 def start_webhook():
 
     app.run(
-
         host="0.0.0.0",
-
-        port=25300
-
+        port=int(os.environ.get("PORT", 25300))
     )
-    if __name__ == "__main__":
+
+
+if __name__ == "__main__":
     start_webhook()
