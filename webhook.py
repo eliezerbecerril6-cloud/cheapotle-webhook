@@ -611,3 +611,5 @@ def start_webhook():
         port=25300
 
     )
+    if __name__ == "__main__":
+    start_webhook()
